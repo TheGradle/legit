@@ -240,3 +240,89 @@ nav {
   background: #fff;
   color: #000;
 }
+
+/* SECTION MAP */
+
+.map {
+  display: flex;
+}
+
+.map-cities {
+  font-family: 'eUkraineTitle';
+  font-weight: 600;
+  color: #959595;
+  position: absolute;
+  right: 220px;
+  line-height: 1.4;
+}
+
+.map-cities--city {
+  transform: skew(0deg, 4deg);
+}
+
+.map-cities--city:first-child,
+.map-cities--city:last-child {
+  font-size: 60px;
+}
+
+.map-cities--city:nth-child(2),
+.map-cities--city:nth-child(4)
+{
+  font-size: 72px;
+}
+
+.map-cities--city_avaible {
+  font-size: 92px;
+  color: #efca66;
+}
+
+.map-google {
+  width: 57%;
+  height: 475px;
+}
+
+.map-google iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* FOOTER */
+
+footer {
+  background: #a47053;
+  padding: 45px 0;
+  color: #fff;
+  margin-top: 70px;
+}
+
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.footer-logo--img {
+  width: 150px;
+  margin-bottom: 11px;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer-info-soc-list--link {
+  margin-left: 15px;
+}
+
+.footer-info-soc-list--link img {
+  width: 32px;
+}
