@@ -417,11 +417,29 @@ nav {
 
 .map-cities--city {
   transform: skew(0deg, 4deg);
-  cursor: pointer;
+  cursor: no-drop;
+  display: block;
+  position: relative;
+  overflow: hidden;
 }
 
-.map-cities--city:hover {
-  text-decoration: underline;
+.map-cities--city_avaible::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background: #efca66;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.map-cities--city:hover::after,
+.map-cities--city:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 .map-cities--city:first-child,
@@ -438,6 +456,11 @@ nav {
 .map-cities--city_avaible {
   font-size: 92px;
   color: #efca66;
+  cursor: pointer;
+}
+
+.map-cities--city span {
+  font-size: 32px;
 }
 
 .map-google {
